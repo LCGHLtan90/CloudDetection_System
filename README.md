@@ -1,4 +1,4 @@
-#云检测系统界面设计
+# 云检测系统界面设计
 ## 1. 简介
 
 该项目是一个用于展示 **遥感影像云检测（二分类图像分割任务）** 的系统界面，提供了用户友好的交互模式，使用户能上传图片、查看检测结果并对检测结果进行人工修正。
@@ -42,7 +42,7 @@ cd CloudDetection_System
 pip install -r requirement.txt
 ```
 
-###2.2. 运行
+### 2.2. 运行
 
 ```bash
 python cloud_UI.py ./configs/segformer/segformer_mit-b2_8xb2-160k_ade20k-512x512_cloud.py ./checkpoints/segformer_b2_best_mIoU_iter_90000.pth
@@ -50,45 +50,45 @@ python cloud_UI.py ./configs/segformer/segformer_mit-b2_8xb2-160k_ade20k-512x512
 可以用自己的配置文件和权重文件进行替换。
 
 ## 3. 功能介绍
-###3.1. 上传图像  
+### 3.1. 上传图像  
 上传图像有两种方式，一种是通过点击**上传**按钮选择图像路径进行上传，另一种则是直接在上传按钮右侧的**输入框**中输入路径后按Enter键即可上传。  
 上传之后会显示图像、上传路径和图像大小。
 <div style="display: flex; flex-wrap: nowrap;">
-    <img src="./picture/img_1.png" alt="Image" style="width: 600px; height: auto;">
+    <img src="pictures/img_1.png" alt="Image" style="width: 600px; height: auto;">
 </div>
 
-###3.2. 查看检测结果 
+### 3.2. 查看检测结果 
 点击**开始检测**按钮即可在右侧的检测结果位置得到推理出的分割结果，以及推理时间和含云量。
 <div style="display: flex; flex-wrap: nowrap;">
-    <img src="./picture/img_2.png" alt="Image" style="width: 600px; height: auto;">
+    <img src="pictures/img_2.png" alt="Image" style="width: 600px; height: auto;">
 </div>
 
-###3.3. 对检测结果进行人工修正  
+### 3.3. 对检测结果进行人工修正  
 **双击**右侧的检测结果，即可跳转到人工修正的子窗口。**拉动下方的滑块**，可以调整推理结果在原图上的覆盖比例，方便更好地和原图进行对比来进行修正。  
 <div style="display: flex; flex-wrap: nowrap;">
-    <img src="./picture/img_3.png" alt="Image" style="width: 280px; height: auto;">
-    <img src="./picture/img_4.png" alt="Image" style="width: 280px; height: auto; margin-left: 40px;">
+    <img src="pictures/img_3.png" alt="Image" style="width: 280px; height: auto;">
+    <img src="pictures/img_4.png" alt="Image" style="width: 280px; height: auto; margin-left: 40px;">
 </div>
 
 点击上方选择画笔大小以及添加去除来调整画笔，用鼠标在图片上拖动即可进行修正。
 <div style="display: flex; flex-wrap: nowrap;">
-    <img src="./picture/img_5.png" alt="Image" style="width: 280px; height: auto;">
+    <img src="pictures/img_5.png" alt="Image" style="width: 280px; height: auto;">
 </div>
 
 点击**保存画布**按钮，就可以将修正后的结果显示在主窗口界面上，含云量也会相应发生改变。
 <div style="display: flex; flex-wrap: nowrap;">
-    <img src="./picture/img_6.png" alt="Image" style="width: 600px; height: auto;">
+    <img src="pictures/img_6.png" alt="Image" style="width: 600px; height: auto;">
 </div>
 
-###3.4. 保存结果  
+### 3.4. 保存结果  
 拖动检测结果下方发滑块，可以选择保存的覆盖比例，点击**保存**按钮即可对结果进行保存，默认路径是图片的上传路径。
 <div style="display: flex; flex-wrap: nowrap;">
-    <img src="./picture/img_7.png" alt="Image" style="width: 600px; height: auto;">
+    <img src="pictures/img_7.png" alt="Image" style="width: 600px; height: auto;">
 </div>
 
 ## 4. 开源许可证
 
-该项目采用 [Creative Commons 许可证 - CC BY-NC 4.0](LICENSE.md) 进行许可。详情请参阅许可证文件。
+该项目采用 [BSD 3-Clause "New" or "Revised" License](LICENSE.md) 进行许可。详情请参阅许可证文件。
 
 ## 5. 联系我
 
